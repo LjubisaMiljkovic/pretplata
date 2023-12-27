@@ -43,7 +43,7 @@ function IndexPage() {
           </Link>
           <div className='container flex justify-center items-center'>
               <h1 className='text-[60px] font-bold mt-[15px] text-white flex items-center'>
-              30 
+              50 
               <span><FaEuroSign/></span></h1>
             </div>
             <h2 className='text-[20px] font-bold mt-[15px] text-white text-center'>Aktiviraj sve kurseve <span className='bg-[#f32b5af5] py-2'>6 meseci</span></h2>
@@ -62,7 +62,7 @@ function IndexPage() {
           </Link>
           <div className='container flex justify-center items-center'>
               <h1 className='text-[60px] font-bold mt-[15px] text-white flex items-center'>
-              30 
+              80 
               <span><FaEuroSign/></span></h1>
             </div>
             <h2 className='text-[20px] font-bold mt-[15px] text-white text-center'>Aktiviraj sve kurseve <span className='bg-[#f32b5af5] py-2'>12 meseci</span></h2>

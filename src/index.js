@@ -8,6 +8,10 @@ import ErrorPage from './pages/ErrorPge';
 
 import MesecDanaPages from './pages/MesecDanaPages';
 import SestMeseciPages from './pages/SestMeseciPages';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import PayPages from './pages/PayPages';
+import DvanaestmeseciPages from './pages/DvanaestmeseciPages';
 
 const router = createBrowserRouter([
   // maiRouter
@@ -30,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/godinu_dana_paket',
-        element:<SestMeseciPages/>
+        element:<DvanaestmeseciPages/>
+      },
+      {
+        path:'/paypackage',
+        element:<PayPages/>
       }
     ],
     
@@ -40,7 +48,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router}/>
+    </Provider>
+   
   </React.StrictMode>
 );
 
