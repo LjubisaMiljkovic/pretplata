@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // icons
@@ -9,6 +9,8 @@ import { GiMoebiusTriangle } from "react-icons/gi";
 
 
 function NavbarComponenet() {
+
+  const [navbarItems, setNavbarItems] = useState(['Pocetna', 'Kursevi', 'Blog', 'Kontakt'])
   return (
     <div className=''>
         <div className="conatiner mx-auto bg-mainBlue h-[90px] flex justify-between items-center">
@@ -22,30 +24,30 @@ function NavbarComponenet() {
                   </div>
               </div>
               <div className='flex justify-end items-center pl-[150px] mt-0 '> 
-                  <Link to='' className='text-white text-[16px] ml-[100px]'>Registruj se</Link>
+                  <Link to='/register' className='text-white text-[16px] ml-[100px]'>Registruj se</Link>
                   <Link to='/godinu_dana_paket' className='bg-yellow-300 px-[44px] py-[10px] ml-[20px] rounded-[30px] font-bold flex  hover:bg-red-700 hover:text-white duration-300'>
                   <div className='items-bottom'><FaRegUser /></div>
-                  Vidi više 
+                  Uloguj se 
                   </Link>
               </div>
 
            </div>
         </div> 
-        <div className='mt-auto'>
+        <div className='bg-blue-300 mt-auto'>
        
           <div className='container mx-auto h-[100px] flex items-center '>
               <div>
                 <div className='flex justify-center place-items-start mt-0 ml-0 '>
-                      <Link to='/'><GiMoebiusTriangle className='text bg-red-700 text-[40px]' /></Link>
+                      <Link to='/pocetna'><GiMoebiusTriangle className='text bg-red-700 text-[40px]' /></Link>
                 </div>
               </div>
               <div className='flex pl-[500px] justify-center items-center'>
                 <ul className='flex gap-10'>
-                    <Link to='/'>Pocetna</Link>
-                    <li>Kursevi</li>
-                    <li>Blog</li>
-                    <li>Kontakt</li>
-                    
+                  
+                  {navbarItems.map((el,i)=>{
+                    return <Link to={`/${el.toLowerCase()}`} key={i}>{el}</Link>
+                  })}
+                                    
                 </ul>
             </div>
           </div>

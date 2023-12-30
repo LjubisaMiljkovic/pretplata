@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import PayPages from './pages/PayPages';
 import DvanaestmeseciPages from './pages/DvanaestmeseciPages';
+import RegisterPages from './pages/RegisterPages';
 
 const router = createBrowserRouter([
   // maiRouter
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage/>,
     children:[
       {
-        path:'/',
+        path:'/pocetna',
         element:<IndexPage/>
       },
       {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path:'/paypackage',
         element:<PayPages/>
+      },
+      {
+        path:'/register',
+        element:<RegisterPages/>
       }
     ],
     
