@@ -13,6 +13,7 @@ import store from './store/store';
 import PayPages from './pages/PayPages';
 import DvanaestmeseciPages from './pages/DvanaestmeseciPages';
 import RegisterPages from './pages/RegisterPages';
+import LoginPages from './pages/LoginPages';
 
 const router = createBrowserRouter([
   // maiRouter
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<RegisterPages/>
+      },
+      {
+        path:'/loggin',
+        element:<LoginPages/>
       }
     ],
     

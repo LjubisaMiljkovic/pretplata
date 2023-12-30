@@ -25,7 +25,7 @@ function NavbarComponenet() {
               </div>
               <div className='flex justify-end items-center pl-[150px] mt-0 '> 
                   <Link to='/register' className='text-white text-[16px] ml-[100px]'>Registruj se</Link>
-                  <Link to='/godinu_dana_paket' className='bg-yellow-300 px-[44px] py-[10px] ml-[20px] rounded-[30px] font-bold flex  hover:bg-red-700 hover:text-white duration-300'>
+                  <Link to='/loggin' className='bg-yellow-300 px-[44px] py-[10px] ml-[20px] rounded-[30px] font-bold flex  hover:bg-red-700 hover:text-white duration-300'>
                   <div className='items-bottom'><FaRegUser /></div>
                   Uloguj se 
                   </Link>
