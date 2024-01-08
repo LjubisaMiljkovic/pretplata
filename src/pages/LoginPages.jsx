@@ -5,9 +5,10 @@ function LoginPages() {
 
     const formik = useFormik({
         initialValues:{
-
+            username:'',
+            password:''
         },
-        //validation
+        //validationSchema:
         onSubmit: (values) => {
             console.log(values);
         }
@@ -27,7 +28,7 @@ function LoginPages() {
             {/*password*/}
             <div className='flex flex-col'>
                 <label className='text-gray-300 text-[15px] '>Password</label>
-                <input type="text"
+                <input type='password'
                 placeholder='Insert password'
                 className='border border-blue-800 rounded-md px-[16px] py-[8px]' />
             </div>
